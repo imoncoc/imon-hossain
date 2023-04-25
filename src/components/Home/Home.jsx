@@ -10,7 +10,7 @@ const Home = () => {
         <div className="row">
           <div
             className="col-10 mx-auto col-md-6 align-self-center text-center main-title my-5"
-            data-aos="fade-right"
+            data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
@@ -27,12 +27,12 @@ const Home = () => {
 
           <div
             className="col-10 col-md-6 mx-auto my-5"
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
             <Lottie
-              className="img-fluid w-75"
+              className="img-fluid w-75 mx-auto"
               animationData={developerWorking}
               loop={true}
             />
@@ -45,7 +45,7 @@ const Home = () => {
             data-aos-duration="2000"
           >
             <Lottie
-              className="img-fluid w-75"
+              className="img-fluid w-75 mx-auto"
               animationData={happyDeveloper}
               loop={true}
             />

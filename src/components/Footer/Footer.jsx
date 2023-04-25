@@ -25,25 +25,31 @@ const Footer = () => {
               </div>
 
               <div className="d-flex justify-content-around my-4">
-                <Link>
+                <Link
+                  to="https://www.facebook.com/mdimon.hossain/"
+                  target="_blank"
+                >
                   <FontAwesomeIcon
                     icon={faFacebook}
                     className=" footer__icon"
                   />
                 </Link>
-                <Link>
+                <Link
+                  to="https://www.linkedin.com/in/imon-hossain-0a13011ba/"
+                  target="_blank"
+                >
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     className=" footer__icon"
                   />
                 </Link>
-                <Link>
+                <Link to="https://twitter.com/ImomH" target="_blank">
                   <FontAwesomeIcon icon={faTwitter} className=" footer__icon" />
                 </Link>
-                <Link>
+                <Link to="https://github.com/imoncoc/" target="_blank">
                   <FontAwesomeIcon icon={faGithub} className=" footer__icon" />
                 </Link>
-                <Link>
+                <Link to="mailto:imonhossain0@gmail.com" target='_blank'>
                   <FontAwesomeIcon
                     icon={faEnvelope}
                     className=" footer__icon"
