@@ -1,0 +1,35 @@
+.footer {
+    background-color: #222;
+}
+
+
+.footer__icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.footer__icon:hover {
+    transform: translateY(-0.5rem) scale(1.1);
+    color: #2998ff;
+}
+
+.footer__link:link,
+.footer__link:visited {
+    /* color: whitesmoke; */
+    color: #2998ff;
+    background-color: #222;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.footer__link:hover,
+.footer__link:active {
+    color: var(--color-primary);
+    box-shadow: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3);
+}

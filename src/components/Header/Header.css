@@ -1,0 +1,205 @@
+
+.navigation__checkbox {
+    display: none;
+}
+.navigation__button {
+    /* background-color: var(--color-grey-dark-2); */
+    /* background-color: #f1faee; */
+    /* background-color: #2f3e46; */
+    /* background-color: #14213d; */
+    background-color: #222;
+    /* background-image: radial-gradient(var(--color-primary-light), var(--color-primary-dark)); */
+    height: 4.4rem;
+    width: 4.4rem;
+    position: fixed;
+    /* top: 3.75rem;
+    right: 3.75rem; */
+    /* Changed to and right */
+    top: 1.2rem;
+    right: 1.2rem;
+
+
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem rgba(--color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+/* .navigation__button:checked,
+.navigation__button:hover{
+    background-color: var(--color-white);
+} */
+
+.navigation__background {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    position: fixed;
+
+    /* top: 4rem;
+    right: 4rem; */
+    /* Changed top right */
+    top: 1.5rem;
+    right: 1.5rem;
+
+
+    background-image: radial-gradient(var(--color-primary-light), var(--color-primary-dark));
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    /* transform: scale(80); */
+}
+.navigation__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+
+    opacity: 1;
+    display: none;
+
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+}
+.navigation__item {
+    margin: 1rem;
+}
+.navigation__link:link,
+.navigation__link:visited {
+    display: inline-block;
+    font-size: 1.9rem;
+    font-weight: 300;
+    padding: 0.6rem 1.25rem;
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-white) 50%);
+    background-size: 240%;
+    transition: all 0.4s;
+
+    cursor: context-menu;
+    /* color: black; */
+}
+
+.navigation__link span{
+    margin-right: 0.63rem;
+    display: inline-block;
+}
+
+.navigation__link:hover,
+.navigation__link:active{
+    background-position: 100%;
+    color: var(--color-primary);
+    transform: translateX(1rem);
+    cursor: pointer;
+}
+
+.navigation__checkbox:checked ~ .navigation__background{
+    transform: scale(60);
+}
+
+.navigation__checkbox:checked ~ .navigation__nav {
+    opacity: 1;
+    width: 100%;
+    display: block;
+}
+
+
+
+/* Icon Styling */
+.navigation__icon{
+    position: relative;
+    margin-top: 2.2rem;
+}
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after{
+    width: 1.9rem;
+    height: 2px;
+    /* background-color: var(--color-grey-dark-3); */
+    background-color: var(--color-white);
+    display: inline-block;
+
+}
+
+.navigation__icon::before,
+.navigation__icon::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.navigation__icon::before{
+    top: -0.5rem;
+}
+.navigation__icon::after {
+    top: 0.5rem;
+}
+
+.navigation__button:hover .navigation__icon:before{
+    top: -0.7rem;
+}
+
+.navigation__button:hover .navigation__icon:after {
+    top: 0.7rem;
+}
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon{
+    background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}
+
+
+
+
+
+/* Responsive Ness */
+
+@media only screen and (max-width: 768px) {
+    .navigation__button {
+        top: 1rem;
+        right: 1rem;
+    }
+        .navigation__background{
+            top: 1.2rem;
+                right: 1.2rem;
+        }
+                .navigation__link:link,
+                .navigation__link:visited{
+                    font-size: 1.7rem;
+                }
+}
+
+@media only screen and (max-width: 576px) {
+    .navigation__button {
+        top: 0.6rem;
+        right: 0.6rem;
+    }
+        .navigation__background {
+            top: 1rem;
+            right: 1rem;
+        }
+                .navigation__link:link,
+                .navigation__link:visited {
+                    font-size: 1.5rem;
+                }
+}
