@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css'
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  console.log(isMenuOpen)
+
+
     return (
       <>
         <div className="navigation">
@@ -11,7 +15,11 @@ const Header = () => {
             className="navigation__checkbox"
             id="navi-toggle"
           />
-          <label htmlFor="navi-toggle" className="navigation__button">
+          <label
+            htmlFor="navi-toggle"
+            className="navigation__button shadow-lg"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             <span className="navigation__icon">&nbsp;</span>
           </label>
 
@@ -45,7 +53,14 @@ const Header = () => {
 
         <div className="container-fluid">
           <div className="row">
-            <div className="col" style={{marginTop: '2rem', marginBottom: '2rem', paddingLeft: '2rem'}}>
+            <div
+              className="col"
+              style={{
+                marginTop: "2rem",
+                marginBottom: "2rem",
+                paddingLeft: "2rem",
+              }}
+            >
               <h2>Imon Hossain</h2>
             </div>
           </div>

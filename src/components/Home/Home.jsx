@@ -3,8 +3,14 @@ import './Home.css'
 import Lottie from "lottie-react";
 import developerWorking from "../../assets//132977-developer-working.json";
 import happyDeveloper from '../../assets/60676-happy-developer.json'
+import Swal from 'sweetalert2';
 
 const Home = () => {
+
+  const handleSweetAlert = () =>{
+    Swal.fire("Coming Soon!", "Website is under construction!", "info");
+  }
+
     return (
       <div className="container-fluid" id="home">
         <div className="row">
@@ -20,6 +26,7 @@ const Home = () => {
             <button
               type="button"
               className=" button green-button mb-5 text-uppercase"
+              onClick={handleSweetAlert}
             >
               Explore
             </button>
@@ -75,6 +82,7 @@ const Home = () => {
               src=""
               target="_blank"
               className="animated-bottom btn mb-5 button green-button text-uppercase"
+              onClick={handleSweetAlert}
             >
               Download CV
             </button>
